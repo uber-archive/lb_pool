@@ -34,7 +34,7 @@ function Pool(http, endpoints, options) {
     options.retry_filter = options.retry_filter || options.retryFilter;
     options.retry_delay = options.retry_delay || options.retryDelay;
     options.ping = options.ping || options.path;
-    options.endpointLengthValidation = true;
+    options.endpointLengthValidation = options.endpointLengthValidation || true;
     if (typeof options.max_retries === "number") {
         options.max_retries = options.max_retries;
     } else if (typeof options.maxRetries === "number") {
